@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="School management solution"/>
+	<meta name="author" content="Siddharth Verma"/>
+	<title>Login | Morning Star School, Ratlam</title>
+	<link rel="stylesheet" href="project.css">
+</head>
+<nav>
+	<ul>
+		<li><a href="s1index.html">HOME</a></li>
+		<li><a href="s1about.html">ABOUT</a></li>
+		<li><a href="s1contact.html">CONTACT</a></li>
+		<li><a href="s1register.html">REGISTER</a></li>
+		<li><a href="s1login.html">LOGIN</a></li>
+	</ul>
+</nav>
+<body>
+<h1>LOGIN</h1>
+<form action="action_page.php" method="post">
+    <div class="imgcontainer">
+    <img src="images/default.png" alt="Avatar" class="avatar">
+    </div>
+    <input type="radio" id="student" name="usertype" value="student">
+    <label for="student">Student</label><br>
+    <input type="radio" id="teacher" name="usertype" value="teacher">
+    <label for="teacher">Teacher</label><br>
+    <input type="radio" id="principal" name="usertype" value="principal">
+    <label for="principal">Principal</label>
+  <div class="container">
+    <br>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter password" name="psw" required>
+
+    <button class="login" type="submit"><a href="s1notice.html" target="_blank" onclick="login()">Login</a></button>
+    <script src="login.js"></script>
+    <script src="alert.js"></script>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn"><a href="s1index.html">Cancel</a></button>
+    <span style="float:right"><a href="#">Forgot password?</a></span>
+  </div>
+</form>
+<hr>
+<footer>
+     <h4>Reach out to us on</h4>
+     <ul>
+	<li><a href="https://youtube.com" target="_blank"><img src="images/Youtube logo.png"></a></li>
+	<li><a href="https://facebook.com" target="_blank"><img src="images/Facebook logo.png"></a></li>		
+	<li><a href="https://twitter.com" target="_blank"><img src="images/Twitter logo.png"></a></li>
+	<li><a href="https://linkedin.com" target="_blank"><img src="images/Linkedin logo.png"></a></li>
+     </ul>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script src="topbtn.js"></script>	
+</body>
+</html>

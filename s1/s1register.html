@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="School management solution"/>
+	<meta name="author" content="Siddharth Verma"/>
+	<title>Register | Morning Star School, Ratlam</title>
+	<link rel="stylesheet" href="project.css">
+</head>
+<nav>
+	<ul>
+		<li><a href="s1index.html">HOME</a></li>
+		<li><a href="s1about.html">ABOUT</a></li>
+		<li><a href="s1contact.html">CONTACT</a></li>
+		<li><a href="s1register.html">REGISTER</a></li>
+		<li><a href="s1login.html">LOGIN</a></li>
+	</ul>
+</nav>
+<body>
+<h1>REGISTER</h1>
+<form action="action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="images/logo.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter password" name="psw" required>
+
+    <label for="sname"><b>Student's name</b></label>
+    <input type="text" placeholder="Enter student's name" name="sname" required>
+
+    <label for="fname"><b>Father's name</b></label>
+    <input type="text" placeholder="Enter father's name" name="fname" required>
+
+    <label for="mname"><b>Mother's name</b></label>
+    <input type="text" placeholder="Enter mother's name" name="mname" required>
+
+    <label for="dob"><b>Date of birth</b></label>
+    <input type="text" placeholder="Enter student's date of birth (DD-MM-YYYY)" name="dob" required>
+
+    <label for="phno"><b>Contact number</b></label>
+    <input type="text" placeholder="Enter contact no. of parent/guardian" name="phno" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter email id of student/parent (optional)" name="email">
+
+    <button class="login" type="submit"><a href="s1login.html" onclick="register()">Register</a></button>
+    <script src="login.js"></script>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn"><a href="s1index.html">Cancel</a></button>
+  </div>
+</form>
+<hr>
+<footer>
+     <h4>Reach out to us on</h4>
+     <ul>
+	<li><a href="https://youtube.com" target="_blank"><img src="images/Youtube logo.png"></a></li>
+	<li><a href="https://facebook.com" target="_blank"><img src="images/Facebook logo.png"></a></li>		
+	<li><a href="https://twitter.com" target="_blank"><img src="images/Twitter logo.png"></a></li>
+	<li><a href="https://linkedin.com" target="_blank"><img src="images/Linkedin logo.png"></a></li>
+     </ul>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script src="topbtn.js"></script>
+<script src="alert.js"></script>	
+</body>
+</html>

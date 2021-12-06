@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<style>
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+</style>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="School management solution"/>
+	<meta name="author" content="Siddharth Verma"/>
+	<title>Library | Morning Star School, Ratlam</title>
+	<link rel="stylesheet" href="project.css">
+</head>
+<nav>
+	<ul>
+		<li><a href="s1notice.html">NOTICEBOARD</a></li>
+		<li><a href="s1class.html">CLASSES</a></li>
+		<li><a href="s1fee.html">FEE PAYMENT</a></li>
+		<li>
+			<div class="dropdown">
+  				<p onclick="myFunction()" class="dropbtn">EXAMS</p>
+  				<div id="myDropdown" class="dropdown-content">
+    				<a href="s1exam.html">EXAM TIMETABLE</a>
+    				<a href="s1result.html">EXAM RESULTS</a>
+  				</div>
+			</div>
+		</li>
+		<li><a href="s1library.html">LIBRARY</a></li>
+	</ul>
+</nav>
+<body>
+<h2>BOOKS AVAILABLE</h2><br>
+<p>Note: Each book issued has to be returned <b style="color: green">within one week</b> after date of issue. There will be a 
+<b style="color: red">fine of Rs. 5 per day</b>, if the return is delayed.</p>
+<div class="search">
+<input id="searchbar" onkeyup="search_book()" type="text" name="search" placeholder="Search a book or writer">
+</div>
+<div>
+    <table class="lib" border="5" cellspacing="0" align="center">
+        <!--<caption>Timetable</caption>-->
+        <tr>
+            <td align="center" height="50" 
+                width="100">
+                <b>Book</b></br>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>Author</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>ISBN</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>Quantity available</b>
+            </td>
+	    <td align="center" height="50" 
+                width="100">
+                <b>Action</b>
+            </td>
+        </tr>
+        <tr class="book">
+            <td align="center" height="50"><b>The Hound of the Baskervilles</b></td>
+            <td align="center" height="50">Arthur Conan Doyle</td>
+            <td align="center" height="50">978-3-16-148410-0</td>
+            <td align="center" height="50">3</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+        <tr class="book">
+            <td align="center" height="50"><b>The Wonderful Wizard of Oz</b></td>
+            <td align="center" height="50">L. Frank Baum</td>
+            <td align="center" height="50">978-3-16-149422-1</td>
+            <td align="center" height="50">1</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+        <tr class="book">
+            <td align="center" height="50"><b>Gulliver's Travels</b></td>
+            <td align="center" height="50">Jonathan Swift</td>
+            <td align="center" height="50">978-3-16-685882-0</td>
+            <td align="center" height="50">1</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+        <tr class="book">
+            <td align="center" height="50"><b>The Test of my Life</b></td>
+            <td align="center" height="50">Yuvraj Singh</td>
+            <td align="center" height="50">978-3-16-183419-5</td>
+            <td align="center" height="50">2</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+        <tr class="book">
+            <td align="center" height="50"><b>Wings of Fire</b></td>
+            <td align="center" height="50">Dr. APJ Abdul Kalam</td>
+            <td align="center" height="50">978-3-16-238510-0</td>
+            <td align="center" height="50">4</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>The Great Gatsby</b></td>
+            <td align="center" height="50">F. Scott Fitzgerald</td>
+            <td align="center" height="50">978-3-16-438510-6</td>
+            <td align="center" height="50">2</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>The Invisible Man</b></td>
+            <td align="center" height="50">H.G. Wells</td>
+            <td align="center" height="50">978-3-26-234610-0</td>
+            <td align="center" height="50">5</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Lord of the Flies</b></td>
+            <td align="center" height="50">William Golding</td>
+            <td align="center" height="50">978-3-16-238521-0</td>
+            <td align="center" height="50">3</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>One Hundred Years of Solitude</b></td>
+            <td align="center" height="50">Gabriel García Márquez</td>
+            <td align="center" height="50">975-2-16-238510-0</td>
+            <td align="center" height="50">1</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>A Passage to India</b></td>
+            <td align="center" height="50">E.M. Forster</td>
+            <td align="center" height="50">978-1-16-221310-0</td>
+            <td align="center" height="50">1</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Oliver Twist</b></td>
+            <td align="center" height="50">Charles Dickens</td>
+            <td align="center" height="50">978-3-16-658217-0</td>
+            <td align="center" height="50">5</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Pride and Prejudice</b></td>
+            <td align="center" height="50">Jane Austen</td>
+            <td align="center" height="50">978-1-26-485882-3</td>
+            <td align="center" height="50">2</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Jungle Book</b></td>
+            <td align="center" height="50">Rudyard Kipling</td>
+            <td align="center" height="50">978-3-16-318231-0</td>
+            <td align="center" height="50">3</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Vicar of Wakefield</b></td>
+            <td align="center" height="50">Oliver Goldsmith</td>
+            <td align="center" height="50">978-3-16-502831-2</td>
+            <td align="center" height="50">1</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Mayor of Casterbridge</b></td>
+            <td align="center" height="50">Thomas Hardy</td>
+            <td align="center" height="50">978-3-16-123987-0</td>
+            <td align="center" height="50">2</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b><i>Godan</i> (The Gift of Cow)</b></td>
+            <td align="center" height="50">Munshi Premchand</td>
+            <td align="center" height="50">978-3-16-684926-0</td>
+            <td align="center" height="50">1</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Harry Potter and the Deathly Hallows</b></td>
+            <td align="center" height="50">J.K. Rowling</td>
+            <td align="center" height="50">978-3-16-635647-1</td>
+            <td align="center" height="50">1</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+	<tr class="book">
+            <td align="center" height="50"><b>Robinson Crusoe</b></td>
+            <td align="center" height="50">Daniel Defoe</td>
+            <td align="center" height="50">978-3-16-477689-0</td>
+            <td align="center" height="50">4</td>
+	    <td align="center" height="50"><button type="submit" onclick="issue()">ISSUE</button>
+		<button type="submit" onclick="ret()">RETURN</button></td>
+        </tr>
+    </table>
+    <script src="book.js"></script>
+</div><br>
+	<hr>
+	<footer>
+	     <h4>Reach out to us on</h4>
+	     <ul>
+		<li><a href="https://youtube.com" target="_blank"><img src="images/Youtube logo.png"></a></li>
+		<li><a href="https://facebook.com" target="_blank"><img src="images/Facebook logo.png"></a></li>
+		<li><a href="https://twitter.com" target="_blank"><img src="images/Twitter logo.png"></a></li>
+		<li><a href="https://linkedin.com" target="_blank"><img src="images/Linkedin logo.png"></a></li>
+	     </ul>
+	</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script src="topbtn.js"></script>
+<script src="dropdown.js"></script>
+<script src="alert.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<style>
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+</style>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="School management solution"/>
+	<meta name="author" content="Siddharth Verma"/>
+	<title>Fee payment | Morning Star School, Ratlam</title>
+	<link rel="stylesheet" href="project.css">
+</head>
+<nav>
+	<ul>
+		<li><a href="s1notice.html">NOTICEBOARD</a></li>
+		<li><a href="s1class.html">CLASSES</a></li>
+		<li><a href="s1fee.html">FEE PAYMENT</a></li>
+		<li>
+			<div class="dropdown">
+  				<p onclick="myFunction()" class="dropbtn">EXAMS</p>
+  				<div id="myDropdown" class="dropdown-content">
+    				<a href="s1exam.html">EXAM TIMETABLE</a>
+    				<a href="s1result.html">EXAM RESULTS</a>
+  				</div>
+			</div>
+		</li>
+		<li><a href="s1library.html">LIBRARY</a></li>
+	</ul>
+</nav>
+<body>
+<h2>FEE DETAILS AND STATUS</h2><br>
+<div>
+    <table class="fee" border="5" cellspacing="0" align="center">
+        <!--<caption>Timetable</caption>-->
+        <tr>
+            <td align="center" height="50" 
+                width="100">
+                <b>Fee installment</b></br>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>To be paid between</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>Amount payable</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>Payment status</b>
+            </td>
+	    <td align="center" height="50" 
+                width="100">
+                <b>Action</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">Tuition fees</td>
+            <td align="center" height="50">July-August</td>
+            <td align="center" height="50">Rs. 500</td>
+            <td align="center" height="50"><b style="color: green">PAID</b></td>
+	    <td align="center" height="50">NONE</td>
+        </tr>
+	<tr>
+            <td align="center" height="50">Exam fees</td>
+            <td align="center" height="50">July-August</td>
+            <td align="center" height="50">Rs. 500</td>
+            <td align="center" height="50"><b style="color: green">PAID</b></td>
+	    <td align="center" height="50">NONE</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">First</td>
+            <td align="center" height="50">September-October</td>
+            <td align="center" height="50">Rs. 10000</td>
+            <td align="center" height="50"><b style="color: green">PAID</b></td>
+	    <td align="center" height="50">NONE</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">Second</td>
+            <td align="center" height="50">November-December</td>
+            <td align="center" height="50">Rs. 10000</td>
+            <td align="center" height="50"><b style="color: red">DUE</b></td>
+	    <td align="center" height="50"><button type="submit"><a style="color: white" href="https://retail.onlinesbi.com/retail/login.htm" onclick="pay()">PAY</a></button></td>
+        </tr>
+        <tr>
+            <td align="center" height="50">Third</td>
+            <td align="center" height="50">January-February</td>
+            <td align="center" height="50">Rs. 10000</td>
+            <td align="center" height="50"><b style="color: red">DUE</b></td>
+	    <td align="center" height="50"><button type="submit"><a style="color: white" href="https://retail.onlinesbi.com/retail/login.htm" onclick="pay()">PAY</a></button></td>
+        </tr>
+    </table>
+</div><br>
+	<hr>
+	<footer>
+	     <h4>Reach out to us on</h4>
+	     <ul>
+		<li><a href="https://youtube.com" target="_blank"><img src="images/Youtube logo.png"></a></li>
+		<li><a href="https://facebook.com" target="_blank"><img src="images/Facebook logo.png"></a></li>
+		<li><a href="https://twitter.com" target="_blank"><img src="images/Twitter logo.png"></a></li>
+		<li><a href="https://linkedin.com" target="_blank"><img src="images/Linkedin logo.png"></a></li>
+	     </ul>
+	</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script src="topbtn.js"></script>
+<script src="dropdown.js"></script>
+<script src="alert.js"></script>
+</body>
+</html>
